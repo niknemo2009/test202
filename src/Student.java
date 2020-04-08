@@ -5,6 +5,6 @@ public class Student {
     public Student(int age, String name) {
         this.age = age;
         this.name = name;
-        // comment
+        // Sova, Group 202
     }
 }
