@@ -126,14 +126,15 @@ public class LoginForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void signInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signInButtonActionPerformed
-       if(!isAdmin()){
+      if(!isAdmin()){
             if(signIn())
-            new ClientAccount(usernameField.getText()).setVisible(true);
-            else {
-                new AdminAccount().setVisible(true);
-                dispose();
-            }
-       }
+            new GUIClientAccount(usernameField.getText()).setVisible(true);
+            dispose();
+        }
+        else {
+            new GUIAdminAccount().setVisible(true);
+            dispose();
+        }
     }//GEN-LAST:event_signInButtonActionPerformed
 
     private void signUpLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpLabelMouseClicked
